@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  min-height: 700px;
+  background: black;
+
+}
+.characters_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.characters_container .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.characters_container .SearchBox {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.characters_container .SearchBox .img img {
+  width: 250px;
+  margin-bottom: 30px;
+}
+.characters_container .SearchBox .search {
+  width: 50%;
+}
+.characters_container .SearchBox .search .form {
+  width: 100%;
+}
+.characters_container .SearchBox .search .form input {
+  width: 100%;
+  height: 40px;
+  padding-left: 15px;
+  outline: none;
+}
+.characters_container .result {
+  width: 90%;
+  margin-top: 10px;
+  padding: 50px;
+  position: relative;
+}
+.characters_container .result .result1{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  cursor: pointer;
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+}
+.card h1 {
+  font-size: 25px;
+  border-bottom: 1px #fff solid;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transform: rotateY(180deg);
+}
+
+.card li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
+}
+.loading {
+  position: absolute;
+  top: 50px;
+  left: 560px;
+}
+.loading_none{
+  display: none;
+}
+
+.card_none {
+  display: none;
+}
+
+
+.userpage {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background: white;
+}
+
+.userpage .button_btn {
+  width: 90%;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.userpage .button_btn button{
+  height: 100%;
+  border: none;
+}
+.userpage .button_btn .btn_backHome {
+  width: 130px;
+  margin-right: 30px;
+}
+.userpage .button_btn .btn_backHome a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+.userpage .button_btn .btn_backHome:hover {
+  background: rgb(138, 136, 136);
+}
+.userpage .button_btn .btn_hireable {
+  width: 130px;
+  background: white;
+}
+.userpage .button_btn .btn_hireable i {
+  color: red;
+}
+
+.userpage .user_information {
+  width: 90%;
+  height: 300px;
+  border: 1px solid rgb(184, 183, 183);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.userpage .user_information .img_user img {
+  width: 200px;
+  height: 200px;
+  border-radius: 999px;
+}
+.userpage .user_information .img_user p {
+  text-align: center;
+}
+.userpage .user_information .name_user {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.userpage .user_information .name_user span {
+  margin-bottom: 15px;
+}
